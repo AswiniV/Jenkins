@@ -27,13 +27,11 @@ pipeline {
         stage('Sonar') {
             steps {
                 echo 'Sonar Scanner'
-               	//def scannerHome = tool 'SonarQube Scanner 3.0'
-			    withSonarQubeEnv('SonarQube Server') {
-			    	sh "-Psonatype -Darguments=-DskipTests -DreleaseVersion=${version} -DdevelopmentVersion=${pom.version} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B"
-            			}
-		}
+               	//def scannerHome = tool 'SonarQube Scanner 3.0'    
+			sh "mvn sonar:sonar -Dsonar.host.url=http://35.227.88.186:9000"
+            			
             }
-        }
+        
         stage('Package') {
             steps {
                 echo 'Packaging'
