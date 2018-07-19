@@ -31,6 +31,7 @@ pipeline {
 			sh "mvn sonar:sonar -Dsonar.host.url=http://35.227.88.186:9000"
             			
             }
+	}
         
         stage('Package') {
             steps {
