@@ -70,7 +70,7 @@
 	<repository>
 		<id>deploymentRepo</id>
 		<name>Internal Releases</name>
-		<url>http://35.237.34.187:8081/repository/maven-releases/</url>
+		<url>http://35.227.88.186:8081/repository/maven-releases/</url>
 	</repository>
 
 </distributionManagement>
