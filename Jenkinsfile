@@ -41,7 +41,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo '## TODO DEPLOYMENT ##'
+                echo 'Deploy'
+		    sh 'mvn deploy'
             }
         }
     }
