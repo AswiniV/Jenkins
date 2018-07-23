@@ -7,9 +7,11 @@ agent {
 }	
     stages {
         stage('Checkout') {
-            git branch: 'master',
+		steps {
+            	git branch: 'master',
     		credentialsId: '9dcd8d46-9018-4abc-8c6c-d61cc1cf5e47',
     		url: 'git@github.com:AswiniVadlamudi/Jenkins.git'
+		}
         }
         stage('Build') {
             steps {
